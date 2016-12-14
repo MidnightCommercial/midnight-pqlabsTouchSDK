@@ -1,0 +1,24 @@
+<?xml version="1.0.0" encoding="UTF-8" ?>
+<cinder>
+<block
+	name="PQLabs Touch SDK"
+	id="org.libcinder.pqlabs"
+	author="m1keall1son"
+	license=""
+	summary=""
+	version="R1"
+	>
+
+	<supports os="msw" />
+
+	<includePath>include</includePath>
+
+	<headerPattern>include/*.h</headerPattern>
+	<sourcePattern>include/*.cpp</sourcePattern>
+
+	<platform os="msw" >
+		<staticLibrary>lib/$(PlatformTarget)/PQMTClient.lib</staticLibrary>
+	</platform>	
+
+</block>
+</cinder>
