@@ -18,6 +18,7 @@
 
 	<platform os="msw" >
 		<staticLibrary>lib/$(PlatformTarget)/PQMTClient.lib</staticLibrary>
+		<buildCopy>dll/$(PlatformTarget)/PQMTClient.dll</buildCopy>
 	</platform>	
 
 </block>
