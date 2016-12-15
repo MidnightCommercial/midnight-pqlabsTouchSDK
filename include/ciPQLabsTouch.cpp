@@ -77,7 +77,7 @@ void PQLabsTouch::OnReceivePointFrame(int frame_id, int time_stamp, int moving_p
 	PQLabsTouch * sdk = static_cast<PQLabsTouch*>(call_back_object);
 	CI_ASSERT(sdk != NULL);
 
-	CI_LOG_V(" frame_id:" << frame_id << " time:" << time_stamp << " ms" << " moving point count:" << moving_point_count);
+	//CI_LOG_V(" frame_id:" << frame_id << " time:" << time_stamp << " ms" << " moving point count:" << moving_point_count);
 	for (int i = 0; i < moving_point_count; ++i) {
 		TouchPoint tp = moving_point_array[i];
 		sdk->mTouchSignal.emit(tp);

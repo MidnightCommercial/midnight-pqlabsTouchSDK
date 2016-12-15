@@ -25,28 +25,28 @@ public:
 	int connect( Service requested_services = Service::ALL );
 	int setTouchMovementThreshold( int threshold_in_pixels );
 
-	void connectTouchListener(const TouchCallback& callback, int priority = 0) { mTouchSignal.connect(priority, callback); }
-	void connectGestureListener(const GestureCallback& callback, int priority = 0) { mGestureSignal.connect(priority, callback); }
+	ci::signals::Connection connectTouchListener(const TouchCallback& callback, int priority = 0) { return mTouchSignal.connect(priority, callback); }
+	ci::signals::Connection connectGestureListener(const GestureCallback& callback, int priority = 0) { return mGestureSignal.connect(priority, callback); }
 
-	void connectTouchBeginListener(const TouchCallback& callback, int priority = 0) { mTouchBeginSignal.connect(priority, callback); }
-	void connectTouchMoveListener(const TouchCallback& callback, int priority = 0) { mTouchMoveSignal.connect(priority, callback); }
-	void connectTouchEndListener(const TouchCallback& callback, int priority = 0) { mTouchEndSignal.connect(priority, callback); }
+	ci::signals::Connection connectTouchBeginListener(const TouchCallback& callback, int priority = 0) { return mTouchBeginSignal.connect(priority, callback); }
+	ci::signals::Connection connectTouchMoveListener(const TouchCallback& callback, int priority = 0) { return mTouchMoveSignal.connect(priority, callback); }
+	ci::signals::Connection connectTouchEndListener(const TouchCallback& callback, int priority = 0) { return mTouchEndSignal.connect(priority, callback); }
 
-	void connectGestureStartListener(const GestureCallback& callback, int priority = 0) { mGestureStartSignal.connect(priority, callback); }
-	void connectGestureEndListener(const GestureCallback& callback, int priority = 0) { mGestureEndSignal.connect(priority, callback); }
+	ci::signals::Connection connectGestureStartListener(const GestureCallback& callback, int priority = 0) { return mGestureStartSignal.connect(priority, callback); }
+	ci::signals::Connection connectGestureEndListener(const GestureCallback& callback, int priority = 0) { return mGestureEndSignal.connect(priority, callback); }
 
-	void connectGestureDownListener(const GestureCallback& callback, int priority = 0) { mGestureDownSignal.connect(priority, callback); }
-	void connectGestureMoveListener(const GestureCallback& callback, int priority = 0) { mGestureMoveSignal.connect(priority, callback); }
-	void connectGestureUpListener(const GestureCallback& callback, int priority = 0) { mGestureUpSignal.connect(priority, callback); }
+	ci::signals::Connection connectGestureDownListener(const GestureCallback& callback, int priority = 0) { return mGestureDownSignal.connect(priority, callback); }
+	ci::signals::Connection connectGestureMoveListener(const GestureCallback& callback, int priority = 0) { return mGestureMoveSignal.connect(priority, callback); }
+	ci::signals::Connection connectGestureUpListener(const GestureCallback& callback, int priority = 0) { return mGestureUpSignal.connect(priority, callback); }
 
-	void connectClickListener(const GestureCallback& callback, int priority = 0) { mClickSignal.connect(priority, callback); }
-	void connectDoubleClickListener(const GestureCallback& callback, int priority = 0) { mDoubleClickSignal.connect(priority, callback); }
-	void connectTwoFingerClickListener(const GestureCallback& callback, int priority = 0) { mTwoFingerClick.connect(priority, callback); }
+	ci::signals::Connection connectClickListener(const GestureCallback& callback, int priority = 0) { return mClickSignal.connect(priority, callback); }
+	ci::signals::Connection connectDoubleClickListener(const GestureCallback& callback, int priority = 0) { return mDoubleClickSignal.connect(priority, callback); }
+	ci::signals::Connection connectTwoFingerClickListener(const GestureCallback& callback, int priority = 0) { return mTwoFingerClick.connect(priority, callback); }
 
-	void connectSwipeUpListener(const GestureCallback& callback, int priority = 0) { mSwipeUpSignal.connect(priority, callback); }
-	void connectSwipeDownListener(const GestureCallback& callback, int priority = 0) { mSwipeDownSignal.connect(priority, callback); }
-	void connectSwipeLeftListener(const GestureCallback& callback, int priority = 0) { mSwipeLeftSignal.connect(priority, callback); }
-	void connectSwipeRightListener(const GestureCallback& callback, int priority = 0) { mSwipeRightSignal.connect(priority, callback); }
+	ci::signals::Connection connectSwipeUpListener(const GestureCallback& callback, int priority = 0) { return mSwipeUpSignal.connect(priority, callback); }
+	ci::signals::Connection connectSwipeDownListener(const GestureCallback& callback, int priority = 0) { return mSwipeDownSignal.connect(priority, callback); }
+	ci::signals::Connection connectSwipeLeftListener(const GestureCallback& callback, int priority = 0) { return mSwipeLeftSignal.connect(priority, callback); }
+	ci::signals::Connection connectSwipeRightListener(const GestureCallback& callback, int priority = 0) { return mSwipeRightSignal.connect(priority, callback); }
 
 private:
 
